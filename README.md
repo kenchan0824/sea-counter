@@ -11,7 +11,7 @@ Follow this [blog](https://blog.learnseahorse.com/blog/localinstall) to install 
 
 The most stable software combination as of writing is as follows:
 
-- Rustc 1.77.2
+- Rust 1.77.2
 - Solana 1.18.12
 - Anchor 0.29.0
 - Seahorse 0.2.0
