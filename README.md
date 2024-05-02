@@ -29,7 +29,7 @@ The most stable software combination as of writing is as follows:
 
 4. You may start writing your Seahorse program in `programs_py/<program_name>.py`
 
-5. Synchronize the program ID found in `Anchor.toml` with that enclosed in the `declare_id()` statement.
+5. Run `anchor keys list` to find the correct program ID. Make sure the one found in `Anchor.toml` and that enclosed in the `declare_id()` statement are in sync.
 
 6. Compile your Seahorse program into Anchor with `seahorse build`. You can also get the IDL under `target/idl/`
 
