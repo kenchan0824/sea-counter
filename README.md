@@ -21,9 +21,11 @@ The most stable software combination as of writing is as follows:
 > [!IMPORTANT]
 > You may think Seahorse as a code generator, it passes **Python** syntax and generate the **Anchor** codes, abstracting away the most boilerplate codes as possible.
 
-1. Initialize your project folder with `seahorse init <project_name>`
+1. Create a Solana wallet account with `solana-keygen new` if you haven't done so. Your private key is located at `~/.config/solana/id.json`
 
-2. Build the Anchor sources with `anchor build`. It takes several minutes but only required to do once.
+2. Initialize your project folder with `seahorse init <project_name>`
+
+3. Go to the project folder and build the Anchor sources with `anchor build`. It takes several minutes but only required to do once.
 
 ---
 #AwesomeSolana 
