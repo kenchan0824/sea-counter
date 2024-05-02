@@ -53,6 +53,10 @@ pub fn increase_handler<'info>(
     mut owner: SeahorseSigner<'info, '_>,
     mut counter: Mutable<LoadedCounter<'info, '_>>,
 ) -> () {
+    if !(counter.borrow().owner == owner.key()) {
+        panic!("Not your counter!");
+    }
+
     assign!(counter.borrow_mut().count, counter.borrow().count + 1);
 }
 

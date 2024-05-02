@@ -41,6 +41,25 @@ describe("Seahorse Counter Program", () => {
 
     counter = await program.account.counter.fetch(counterPK);
     assert.ok(counter.count === initCount+1);
-  })
+  });
+
+  it("increase() should only handle owner's counter", async () => {
+    const hacker = web3.Keypair.generate();
+    let passed = false;
+
+    try {
+      await program.methods.increase()
+      .accounts({
+        owner : hacker.publicKey,
+        counter: counterPK
+      })
+      .signers([hacker])
+      .rpc();
+
+      passed = true;
+    } catch {}
+    
+    return assert.ok(!passed);
+  });
 
 });

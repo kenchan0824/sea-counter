@@ -20,4 +20,5 @@ def init_counter(owner: Signer, counter: Empty[Counter]):
 
 @instruction
 def increase(owner: Signer, counter: Counter):
+    assert counter.owner == owner.key(), "Not your counter!"
     counter.count += 1
