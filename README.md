@@ -7,7 +7,7 @@
 Follow this [blog](https://blog.learnseahorse.com/blog/localinstall) to install Seahorse, your installations sequence will be `Rust > Solana > Anchor > Seahorse`. 
 
 > [!NOTE]
-> Beware some old materials would refer to the `seahorse-lang` package. This is the repository from the original Seahorse creator but has been abandoned, install `seahorse-dev` instead. 
+> Beware some old materials refer to the `seahorse-lang` package, which has been abandoned. If you have a Seahorse version 0.2.7, it's very likely you installed the wrong package. Install `seahorse-dev` instead. 
 
 The most stable software combination as of writing is as follows:
 
@@ -19,7 +19,7 @@ The most stable software combination as of writing is as follows:
 ## How to Use Seahorse
 
 > [!IMPORTANT]
-> You may think Seahorse as a code generator, it passes **Python** syntax and generate the **Anchor** codes, abstracting away the most boilerplate codes as possible.
+> You can think Seahorse as a code generator, it parses the **Python** syntax and generate **Anchor** codes, abstracting away the most boilerplate codes as possible.
 
 1. Create a Solana wallet account with `solana-keygen new` if you haven't done so. Your private key is located at `~/.config/solana/id.json`
 
@@ -37,7 +37,7 @@ The most stable software combination as of writing is as follows:
 
 8. Run `anchor test` to deploy the Anchor program to `localnet` and run the test script at the same time.
 
-9. Every time you modify the Seahorse program, changes are not synchronized to the Anchor codes automatically. You may create a Node script in `package.json` to streamline the tasks.  
+9. Every time you modify the Seahorse program, changes are not synchronized to Anchor codes automatically. You may create a Node script in `package.json` to streamline the tasks.
 
 ---
 #AwesomeSolana 
