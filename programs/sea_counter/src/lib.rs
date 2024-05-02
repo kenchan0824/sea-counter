@@ -224,6 +224,31 @@ mod sea_counter {
     use std::collections::HashMap;
 
     #[derive(Accounts)]
+    pub struct Increase<'info> {
+        #[account(mut)]
+        pub owner: Signer<'info>,
+        #[account(mut)]
+        pub counter: Box<Account<'info, dot::program::Counter>>,
+    }
+
+    pub fn increase(ctx: Context<Increase>) -> Result<()> {
+        let mut programs = HashMap::new();
+        let programs_map = ProgramsMap(programs);
+        let owner = SeahorseSigner {
+            account: &ctx.accounts.owner,
+            programs: &programs_map,
+        };
+
+        let counter = dot::program::Counter::load(&mut ctx.accounts.counter, &programs_map);
+
+        increase_handler(owner.clone(), counter.clone());
+
+        dot::program::Counter::store(counter);
+
+        return Ok(());
+    }
+
+    #[derive(Accounts)]
     pub struct InitCounter<'info> {
         #[account(mut)]
         pub owner: Signer<'info>,

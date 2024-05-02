@@ -17,3 +17,7 @@ def init_counter(owner: Signer, counter: Empty[Counter]):
     )
     counter.owner = owner.key()
     counter.count = 0
+
+@instruction
+def increase(owner: Signer, counter: Counter):
+    counter.count += 1

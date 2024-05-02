@@ -28,4 +28,19 @@ describe("Seahorse Counter Program", () => {
     assert.ok(counter.count === 0);
   });
 
+  it("increase() should increase counter by 1", async () => {
+    let counter = await program.account.counter.fetch(counterPK);
+    const initCount = counter.count
+
+    await program.methods.increase()
+      .accounts({
+        owner,
+        counter: counterPK
+      })
+      .rpc();
+
+    counter = await program.account.counter.fetch(counterPK);
+    assert.ok(counter.count === initCount+1);
+  })
+
 });

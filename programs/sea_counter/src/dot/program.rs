@@ -49,6 +49,13 @@ pub struct LoadedCounter<'info, 'entrypoint> {
     pub count: u16,
 }
 
+pub fn increase_handler<'info>(
+    mut owner: SeahorseSigner<'info, '_>,
+    mut counter: Mutable<LoadedCounter<'info, '_>>,
+) -> () {
+    assign!(counter.borrow_mut().count, counter.borrow().count + 1);
+}
+
 pub fn init_counter_handler<'info>(
     mut owner: SeahorseSigner<'info, '_>,
     mut counter: Empty<Mutable<LoadedCounter<'info, '_>>>,
