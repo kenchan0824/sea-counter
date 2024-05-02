@@ -1,6 +1,6 @@
 # Seahorse Counter
 
-**Solana program** (smart contract) has a very unique programming model. The **Counter program** is one of the simplest examples to demonstrate how a Solana program handles **data storage**. And **Seahorse** is the most elegant framework for writing Solana programs.
+**Solana program** (smart contract) has a very unique programming model. A **Counter program** is one of the simplest examples to demonstrate how **data storage** is handled, and **Seahorse** is the most elegant framework to write Solana programs.
 
 ## Seahorse Setup
 
