@@ -6,7 +6,8 @@
 
 Follow this [blog](https://blog.learnseahorse.com/blog/localinstall) to install Seahorse, your installations sequence will be `Rust > Solana > Anchor > Seahorse`. 
 
->Beware some old materials would refer to the `seahorse-lang` package. This is the repository from the original Seahorse creator but has been abandoned, install `seahorse-dev` instead. 
+> [!NOTE]
+> Beware some old materials would refer to the `seahorse-lang` package. This is the repository from the original Seahorse creator but has been abandoned, install `seahorse-dev` instead. 
 
 The most stable software combination as of writing is as follows:
 
@@ -16,9 +17,13 @@ The most stable software combination as of writing is as follows:
 - Seahorse 0.2.0
 
 ## How to Use Seahorse
-You may think Seahorse as a code generator, it passes **Python** syntax and generate the **Anchor** codes, abstracting away the most boilerplate codes as possible.
+
+> [!IMPORTANT]
+> You may think Seahorse as a code generator, it passes **Python** syntax and generate the **Anchor** codes, abstracting away the most boilerplate codes as possible.
 
 1. Initialize your project folder with `seahorse init <project_name>`
 
 2. Build the Anchor sources with `anchor build`. It takes several minutes but only required to do once.
 
+---
+#AwesomeSolana 
